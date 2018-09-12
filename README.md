@@ -1,6 +1,8 @@
 ----
 BELOW IS OLD -- THIS REPO NOW TO HOUSE ALL OF THE BROWSER CLIENTS AS WELL AS THE EXPRESS SERVER TO BE HOSTE ON:
 theWebsite.link
+
+for the API, see: https://github.com/danielseehausen/ffd-api
 ----
 
 ## Apps
