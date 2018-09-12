@@ -1,3 +1,8 @@
+----
+BELOW IS OLD -- THIS REPO NOW TO HOUSE ALL OF THE BROWSER CLIENTS AS WELL AS THE EXPRESS SERVER TO BE HOSTE ON:
+theWebsite.link
+----
+
 ## Apps
 
 There are 5 discrete apps (+ bot scripts) that make up the entire experience.
