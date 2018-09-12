@@ -1,0 +1,76 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+:root {
+  --black: #302c2e;
+  --lightGreen: #c0edef;
+  --lightBlue: #d5e9f6;
+  --darkBlue: rgba(0, 18, 137, 1);
+  --white: rgb(239,248,217);
+  --green: rgba(6, 214, 160, 1);
+  --blue: rgba(27, 154, 170, 1);
+  --pink: rgba(239, 71, 111, 1);
+  --yellow: rgba(255, 196, 61, 1);
+  --black: #302c2e;
+  }
+
+* {
+  font-family: 'Source Code Pro'
+}
+
+* {
+  font-family: 'Source Code Pro'
+}
+
+/* App Styles */
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: white;
+}
+
+.header-text {
+  margin-bottom: 0px;
+  color: var(--black)
+}
+
+.chart-container{
+  background-color: var(--lightBlue);
+  border: 2px solid var(--black);
+  box-shadow: 7px 10px var(--black);
+  padding: 20px;
+  margin-top: 0;
+}
+
+/* Stats Boxs Styles */
+.stats-boxes{
+  width: 100vw;
+}
+
+.stat-box {
+  width: 25%;
+  background-color: var(--lightBlue);
+  border: 2px solid var(--black);
+  box-shadow: 7px 10px var(--black);
+}
+
+/* Axis Styles */
+.Axis path,
+.Axis line {
+  stroke: var(--black);
+}
+
+.Axis text {
+  font-size: 11px;
+  fill: var(--black);
+}
+
+.Axis-Bottom text {
+  transform: rotate(-45deg);
+  text-anchor: end;
+  fill: var(--black);
+}
