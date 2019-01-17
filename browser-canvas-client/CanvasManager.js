@@ -2,16 +2,16 @@ class CanvasManager {
 
   constructor(dimension) {
     this.zoomer = document.getElementById(`zoomer`)
-    this.setDefaultDimension()
     this.zoomStatus = document.getElementById(`zoomStatus`)
+    this.dragger = document.getElementById('dragger')
     this.mover = document.getElementById('mover')
+    this.setDefaultDimension()
     this.x = 0
     this.y = 0
     this.zoom = 1
     this.sizeAdjust = window.screen.height * .00165
     this.mover.style.transform = `translate(0px, 0px)`
     this.zoomer.style.transform = `scale(${this.sizeAdjust}, ${this.sizeAdjust})`
-    this.dragger = document.getElementById('dragger')
   }
 
   setDefaultDimension() {
