@@ -13,7 +13,6 @@ colorForm.addEventListener('submit', (e) => {
   colorPicker.style.backgroundColor = hex.value
   colorPicker.style.outlineColor = invertColor(hex.value)
   hexColor = hex.value
-  // console.log(hex.value)
 })
 
 function componentToHex(c) {

@@ -9,7 +9,6 @@ function showModal() {
   modal.style.zIndex = 10
   modal.focus()
   modalOpen = true
-
   openButton.style.opacity = 0
   openButton.style.zIndex = -1
 }
