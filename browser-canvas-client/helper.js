@@ -18,7 +18,6 @@ function hideModal() {
   modal.style.opacity = 0
   modal.style.zIndex = -1
   modalOpen = false
-
   openButton.style.opacity = .5
   openButton.style.zIndex = 10
 }
@@ -29,4 +28,3 @@ function toggleModal() {
 
 openButton.onclick = toggleModal
 closeButton.onclick = toggleModal
-// modal.onblur = hideModal
