@@ -4,11 +4,11 @@ class Dragger{
     this.dragger = document.getElementById('dragger')
     this.Xtilter = document.getElementById('Xtilter')
     this.Ytilter = document.getElementById('Ytilter')
-      this.startingX = 0
-      this.startingY = 0
-      this.lastTimeX = 0
-      this.lastTimeY = 0
-      this.xTilt = 0
+    this.startingX = 0
+    this.startingY = 0
+    this.lastTimeX = 0
+    this.lastTimeY = 0
+    this.xTilt = 0
     this.dragEvent = false
   }
 
@@ -32,10 +32,8 @@ class Dragger{
 
   mouseMove(e){
     if (this.dragEvent === true){
-      this.xDiff = this.startingX - e.clientX
-      this.yDiff = this.startingY - e.clientY
-      this.newX = this.lastTimeX - this.xDiff
-      this.newY = this.lastTimeY - this.yDiff
+      this.newX = this.lastTimeX - (this.startingX - e.clientX)
+      this.newY = this.lastTimeY - (this.startingY - e.clientY)
       const newPos = `translate(${this.newX}px, ${this.newY}px)`
       this.dragger.style.transform = newPos
       this.handleTilt(e)
