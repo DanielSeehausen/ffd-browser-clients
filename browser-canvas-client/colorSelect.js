@@ -13,7 +13,6 @@ colorForm.addEventListener('submit', (e) => {
   colorPicker.style.backgroundColor = hex.value
   colorPicker.style.outlineColor = invertColor(hex.value)
   hexColor = hex.value
-  // console.log(hex.value)
 })
 
 function componentToHex(c) {
@@ -33,7 +32,7 @@ function selectColor(colorInfo) {
   resetPointer()
 }
 
-function resetPointer(e){
+function resetPointer(){
     document.body.style.cursor = "auto"
 }
 
@@ -51,24 +50,29 @@ function getColor(coords) {
 
 function applyColor(coords) {
   httpConn.setTile(coords.x, coords.y, hexColor.slice(1))
-  // resetPointer()
 }
 
 function handleClick(e){
   let coords = getCursorPosition(e)
   let colorInfo = getColor(coords)
   if (e.target.id == "pick"){
-    e.preventDefault()
-    document.body.style.cursor = 'url("assets/eyedropper.png"), auto'
+      if(document.body.style.cursor === 'url("assets/eyedropper.png"), auto'){
+          resetPointer()
+      } else {
+        document.body.style.cursor = 'url("assets/eyedropper.png"), auto'
+      }
   }
-  else if (e.target.id == "paint"){
-    e.preventDefault()
+  else if (e.target.id === "paint"){
+    if (document.body.style.cursor === 'url("assets/paintbrush.png"), auto'){
+        resetPointer()
+    } else {
     document.body.style.cursor = 'url("assets/paintbrush.png"), auto'
+    }
   }
-  else if (document.body.style.cursor == 'url("assets/eyedropper.png"), auto') {
+  else if (document.body.style.cursor === 'url("assets/eyedropper.png"), auto') {
     selectColor(colorInfo)
   }
-  else if (document.body.style.cursor == 'url("assets/paintbrush.png"), auto') {
+  else if (document.body.style.cursor === 'url("assets/paintbrush.png"), auto') {
     applyColor(coords)
   }
 }
@@ -97,17 +101,3 @@ function padZero(str, len) {
     var zeros = new Array(len).join('0');
     return (zeros + str).slice(-len);
 }
-
-
-
-// function handleClicks(e) {
-//   console.log(e.target.id)
-//
-//   } else if (document.body.style.cursor == 'url("assets/paintbrush.png"), auto') {
-//     console.log("hi")
-//     resetPointer(e)
-//   }
-// }
-
-// handle click identifies event.target.id
-// if/then calls different functions that handle logic

@@ -57,6 +57,10 @@ hr {
   opacity: 0.5;
   user-select: none;
 }
+#help-button:hover {
+  background-color:RGB(255,255,255);
+  border-radius: 50%;
+}
 
 .fader {
   transition: opacity 0.2s ease-in-out;
@@ -86,6 +90,11 @@ hr {
   cursor: pointer;
 }
 
+#close-help-modal-button:hover{
+  background-color: RGB(255,255,255);
+  border-radius: 50%;
+ }
+
 #colorPicker {
   position: absolute;
   left: 10px;
@@ -98,6 +107,7 @@ hr {
   text-align: center;
   background-color: rgb(0,0,0);
 }
+
 
 #pick {
   cursor: inherit;

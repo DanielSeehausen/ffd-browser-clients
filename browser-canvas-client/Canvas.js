@@ -25,11 +25,8 @@ class Canvas {
     let g = parseInt(color.slice(2,4), 16)
     let b = parseInt(color.slice(4), 16)
     let a = 255
-
     let colorData = new Uint8ClampedArray([r,g,b,a])
-
     const data = new ImageData(colorData, 1, 1)
-
     this.ctx.putImageData(data, x, y)
   }
 }
